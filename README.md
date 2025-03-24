@@ -3,8 +3,6 @@
 이 프로젝트는 **PHP**, **SCSS**, **JavaScript**의 기본 기술을 구축하고 향상시키기 위해 설계되었습니다.  
 This project is designed to build and enhance basic skills in **PHP**, **SCSS** and **JavaScript**.
 
----
-
 ## 🚀 주요 기능 / Features
 
 - ✨ **JavaScript 비주얼 효과 / Visual Effects**
@@ -24,8 +22,6 @@ This project is designed to build and enhance basic skills in **PHP**, **SCSS** 
     Basic server-side logic and data handling.
   - 간단한 폼 처리와 동적 페이지 렌더링  
     Simple form processing and page rendering.
-
----
 
 ## 🚚 배포 / Deployment
 
