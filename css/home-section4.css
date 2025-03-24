@@ -1,0 +1,57 @@
+.home-section4 {
+  padding: 10vh 0;
+  background: white;
+}
+.home-section4 .center {
+  width: min(95%, 1200px);
+  margin: 0 auto;
+}
+.home-section4 .center .section-title {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+}
+.home-section4 .center .section-title b {
+  margin: 0 auto;
+}
+.home-section4 .center .section-title p {
+  max-width: 550px;
+}
+.home-section4 .center .carousel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.home-section4 .center .carousel .swiper-wrapper {
+  z-index: auto;
+}
+.home-section4 .center .carousel .swiper-wrapper .swiper-slide img {
+  position: relative;
+  width: 100%;
+}
+.home-section4 .center .carousel button {
+  position: absolute;
+}
+.home-section4 .center .carousel button i {
+  font-size: 3em;
+  color: #333;
+}
+.home-section4 .center .carousel .indicator {
+  bottom: 40px;
+  position: absolute;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 15px;
+  width: 130px;
+  margin: 0 auto;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.home-section4 .center .carousel .indicator span {
+  margin: 3px 10px;
+  transform: translateY(1.91px);
+}/*# sourceMappingURL=home-section4.css.map */

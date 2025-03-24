@@ -1,0 +1,55 @@
+.home-section6 {
+  padding: 10vh 0;
+  background: white;
+  overflow: hidden;
+}
+.home-section6 .center {
+  width: min(95%, 1200px);
+  margin: 0 auto;
+}
+.home-section6 .center .section-title {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  max-width: 1000px;
+  text-align: center;
+  color: #333;
+}
+.home-section6 .center .section-title b {
+  margin: 0 auto;
+  font-size: 4vw;
+}
+.home-section6 .center .section-title p {
+  max-width: 450px;
+}
+.home-section6 .center .carousel .swiper-wrapper {
+  z-index: auto;
+}
+.home-section6 .center .carousel .swiper-wrapper .swiper-slide {
+  padding: 0 60px;
+}
+.home-section6 .center .carousel .swiper-wrapper .swiper-slide img {
+  width: 100%;
+}
+.home-section6 .center .carousel .swiper-wrapper .swiper-slide figcaption {
+  color: #333;
+}
+.home-section6 .center .carousel .swiper-wrapper .swiper-slide figcaption h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+.home-section6 .center .carousel .swiper-wrapper .swiper-slide figcaption p {
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+.home-section6 .center .carousel .indicator {
+  text-align: center;
+}
+@media screen and (max-width:1000px) {
+  .home-section6 .center .section-title {
+    max-width: 500px;
+  }
+  .home-section6 .center .section-title b {
+    font-size: 6vw;
+  }
+}/*# sourceMappingURL=home-section6.css.map */

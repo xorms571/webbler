@@ -1,0 +1,60 @@
+@use 'mixin' as m;
+
+.home-section5{
+  background: rgb(14, 14, 100);
+  video{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    object-fit: cover;
+    height: 100vh;
+    mix-blend-mode: exclusion;
+    opacity: .8;
+  }
+  ul{
+    position: relative;
+    width: min(95%, 1400px);
+    margin: 0 auto;
+    margin-top: -100vh;
+    padding: 10vh 0;
+    li{
+      &:not(:last-child){margin-bottom: 10vh;}
+      .inner{
+        @media #{m.$lg} {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          img{
+            width: 50%;
+          }
+          .section-title{
+            width: 40%;
+            color: #fff;
+          }
+        }
+      }
+      &:nth-child(even){
+        .inner{
+          @media #{m.$lg} {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+      @media #{m.$max-lg} {
+        .inner{
+          img{
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 40px;
+          }
+          .section-title{
+            color: #fff;
+            margin: 0 auto;
+            width: 90%;
+            p{width: 80%;}
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@use 'mixin' as m;
+
+main{
+  z-index: 1;
+  position: relative;
+}
+.top{
+  position: fixed;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  z-index: 99;
+  border: 1px solid #fff;
+  mix-blend-mode: difference;
+  i{color: #fff; font-size: 1.5em;}
+  /* hover motion */
+  &:hover{
+    transition: background .5s, color .5s, border .5s;
+    //fade,slide 명령어를 js에서 설정했을경우 transition all을 해주면 안됨
+    background: #fff;
+    color: #000;
+    border-color: #000;
+    i{color: #000; font-size: 1.5em;}
+  }
+  /* show & hide toggle motion */
+  display: none;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: m.$dark-color;
+  padding: 50px 0;
+  h5{
+    /* @media (hover:hover) {&:hover {.invert {opacity: 1;}.white {opacity: 0;}}}
+    img {position: absolute;height: 100%;transition: all .4s;}
+    .invert {opacity: 0;}
+    .white {opacity: 1;} */
+  }
+  @media #{m.$max-lg} {
+    .center{flex-direction: column;}
+    h5{padding-bottom: 20px;}
+    .company{padding: 20px 0;}
+    .guide{padding-top: 20px;}
+  }
+  .center {
+    width: min(95%, 1400px);
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    >* {
+      @media #{m.$lg} {
+        width: 33.33%;
+        border-right: 1px dotted #fff;
+        img{height: 78px; margin: 0 auto;}
+      }
+      @media #{m.$max-lg} {
+        width: 95%;
+        border-bottom: 1px dotted #fff;
+        img{height: 77px; margin: 0 auto;}
+      }
+    }
+    .guide {
+      border: none;
+      p{
+        a{color: m.$green-color;}
+        a:hover{text-decoration: underline;}
+      }
+    }
+    .company, .guide{
+      h6{
+        font-size: 1.3em; 
+        font-weight: 600; 
+        margin-bottom: 10px;
+        i{
+          font-size: 1em; 
+          color: #fff; 
+          margin-right: 20px;
+        }}
+      p{font-size: .8em; }
+    }
+  }
+}

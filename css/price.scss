@@ -1,0 +1,190 @@
+@use 'mixin' as m;
+
+.price-bg{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  background: #fff;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden; //높이가 정해져있을 경우 오버플로우를 해줘야함
+  img{
+    transition: opacity 1s;
+    @media #{m.$lg} {
+      width: 70%;
+      margin-left: auto;
+    }
+    @media #{m.$max-lg} {
+      width: 100%;
+      opacity: .3;
+    }
+  }
+  #particles-js{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0; top: 0;
+  }
+}
+.price-main{
+  overflow: hidden;
+}
+.price-section1{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  .center{
+    width: min(95%, 1400px);
+    margin: 0 auto;
+    @media #{m.$max-lg} {
+      width: min(80%, 1200px);
+      margin: 0 auto;
+    }
+    .text-box{
+      color: m.$dark-color;
+      max-width: 500px;
+      .section-title{
+        p{margin-bottom: 40px;}
+        div{font-size: .9em; max-width: 420px;}
+        div:not(:last-child){margin-bottom: 20px;}
+      }
+    }
+  }
+}
+.price-section2{
+  padding: 10vh 0;
+  background: m.$blue-color;
+  .center{
+    @media #{m.$lg} {
+      width: min(95%, 1400px);
+      margin: 0 auto;
+      margin-top: -25vh;
+    }
+    @media #{m.$max-lg} {
+      width: min(80%, 1200px);
+      margin: 0 auto;
+      margin-top: -25vh;
+    }
+    figure{
+      @media #{m.$lg} {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        .img-wrap{
+          width: 47%;
+        }
+        .section-title{
+          width: 47%;
+          p{max-width: 555px;}
+        }
+      }
+      @media #{m.$max-lg} {
+        img{
+          max-width: 500px;
+          margin: 0 auto;
+          margin-bottom: 40px;
+        }
+      }
+      .img-wrap{
+        img{width: 100%;}
+      }
+      .section-title{
+        color: #fff;
+      }
+    }
+    /* motion */
+    figure{
+      .img-wrap{
+        perspective: 1000px;
+        img{
+          transition: transform 1s;
+          transform-origin: center bottom;
+          transform: rotateX(-90deg);
+          backface-visibility: hidden;
+        }
+      }
+    }
+    figure.active{
+      img{
+        transform: rotateX(0deg);
+      }
+    }
+    .price-table{
+      margin-top: 10vh;
+      @media #{m.$lg} {
+        display: flex;
+        justify-content: space-between;
+        li{
+          width: 32%;
+        }
+      }
+      @media #{m.$max-lg} {
+        li{
+          max-width: 500px;
+          margin: 0 auto;
+          &:not(:last-child){
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+    .price-table{
+      li{
+        background: m.$dark-color;
+        color: m.$dark-color;
+        .title{
+          em{display: block; font-size: 1.5em; margin-bottom: 20px; font-weight: 800;}
+        }
+        .price{
+          strong{display: block; font-size: 3em; margin-bottom: 10px; font-weight: 800;}
+          small{font-size: 1.2em;}
+        }
+        p{
+          &.price, &.title{
+            padding: 30px 0;
+          }
+          &:last-child{
+            padding: 40px 0;
+          }
+          &:not(.price, .title, :last-child){
+            font-size: 1.2em;
+          }
+          padding: 15px 0;
+          text-align: center;
+          border-bottom: 1px solid #ccc;
+          font-weight: 400;
+          b{font-weight: 700;}
+          a{
+            background: m.$dark-color;
+            color: #fff;
+            text-align: center;
+            padding: 15px 50px;
+            transition: all .3s;
+            &:hover{
+              background: m.$green-color;
+              color: m.$dark-color;
+              font-weight: 900;
+            }
+          }
+        }
+      }
+      /* motion */
+      li{
+        perspective: 1000px;
+        >p{
+          transition: all 1s;
+          transform: rotateX(-180deg);
+          backface-visibility: hidden;
+        }
+        & p.active{
+          background: #eee;
+          transform: rotateX(0deg);
+          &.price{
+            background: m.$green-color;}
+        }
+      }
+    }
+  }
+}

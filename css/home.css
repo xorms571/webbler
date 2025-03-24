@@ -1,0 +1,50 @@
+.scrollSpy {
+  position: fixed;
+  right: 0;
+  z-index: 98;
+  top: 50%;
+  transform: translateY(-50%);
+  mix-blend-mode: difference;
+}
+.scrollSpy .btn5 b {
+  text-indent: -110%;
+}
+.scrollSpy button {
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: 20px 30px;
+  transition: all 0.5s;
+}
+.scrollSpy button b {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-55%, -55%);
+  font-size: 0.5em;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  text-indent: -120%;
+}
+.scrollSpy button:hover b {
+  display: block;
+}
+.scrollSpy button.active {
+  background: #fff;
+  transform: scale(150%);
+}
+.scrollSpy button.active b {
+  transform: translate(-55%, -55%) scale(55%);
+  font-size: 0.7em;
+}
+@media screen and (max-width:1000px) {
+  .scrollSpy {
+    display: none;
+  }
+}/*# sourceMappingURL=home.css.map */

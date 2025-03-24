@@ -1,0 +1,110 @@
+main {
+  z-index: 1;
+  position: relative;
+}
+
+.top {
+  position: fixed;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  z-index: 99;
+  border: 1px solid #fff;
+  mix-blend-mode: difference;
+  /* hover motion */
+  /* show & hide toggle motion */
+  display: none;
+}
+.top i {
+  color: #fff;
+  font-size: 1.5em;
+}
+.top:hover {
+  transition: background 0.5s, color 0.5s, border 0.5s;
+  background: #fff;
+  color: #000;
+  border-color: #000;
+}
+.top:hover i {
+  color: #000;
+  font-size: 1.5em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #333;
+  padding: 50px 0;
+}
+footer h5 {
+  /* @media (hover:hover) {&:hover {.invert {opacity: 1;}.white {opacity: 0;}}}
+  img {position: absolute;height: 100%;transition: all .4s;}
+  .invert {opacity: 0;}
+  .white {opacity: 1;} */
+}
+@media screen and (max-width:1000px) {
+  footer .center {
+    flex-direction: column;
+  }
+  footer h5 {
+    padding-bottom: 20px;
+  }
+  footer .company {
+    padding: 20px 0;
+  }
+  footer .guide {
+    padding-top: 20px;
+  }
+}
+footer .center {
+  width: min(95%, 1400px);
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width:1000px) {
+  footer .center > * {
+    width: 33.33%;
+    border-right: 1px dotted #fff;
+  }
+  footer .center > * img {
+    height: 78px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width:1000px) {
+  footer .center > * {
+    width: 95%;
+    border-bottom: 1px dotted #fff;
+  }
+  footer .center > * img {
+    height: 77px;
+    margin: 0 auto;
+  }
+}
+footer .center .guide {
+  border: none;
+}
+footer .center .guide p a {
+  color: #00fbb9;
+}
+footer .center .guide p a:hover {
+  text-decoration: underline;
+}
+footer .center .company h6, footer .center .guide h6 {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+footer .center .company h6 i, footer .center .guide h6 i {
+  font-size: 1em;
+  color: #fff;
+  margin-right: 20px;
+}
+footer .center .company p, footer .center .guide p {
+  font-size: 0.8em;
+}/*# sourceMappingURL=footer.css.map */

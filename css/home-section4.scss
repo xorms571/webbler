@@ -1,0 +1,57 @@
+@use 'mixin' as m;
+
+.home-section4 {
+  padding: 10vh 0;
+  background: white;
+
+  .center {
+    width: min(95%,1200px);
+    margin: 0 auto;
+    .section-title{
+      margin: 0 auto;
+      margin-bottom: 40px;
+      text-align: center;
+      color: m.$dark-color;
+      b{
+        margin: 0 auto;
+      }
+      p{max-width: 550px;}
+    }
+    .carousel{
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #eee;
+      box-shadow: 0 0 20px rgba(#000, .1);
+      .swiper-wrapper{
+        z-index: auto;
+        .swiper-slide{
+          img{
+            position: relative;
+            width: 100%;
+          }
+        }
+      }
+      button{
+        position: absolute;
+        i{font-size: 3em; color: m.$dark-color;}
+      }
+      .indicator{
+        bottom: 40px;
+        position: absolute;
+        border: 1px solid #ccc;
+        background: #fff;
+        border-radius: 15px;
+        width: 130px;
+        margin: 0 auto;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 0 20px rgba(#000, .1);
+        span{
+          margin: 3px 10px;
+          transform: translateY(1.91px);
+        }
+      }
+    }
+  }
+}

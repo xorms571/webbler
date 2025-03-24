@@ -1,0 +1,79 @@
+@use 'mixin' as m;
+
+.home-section2{
+  background: white;
+  padding: 10vh 0;//브라우저 높이의 1/10
+  overflow: hidden;
+  .center{
+    width: min(95%, 1400px);
+    margin: 0 auto;
+    @media #{m.$lg} {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+    figure{
+      perspective: 1000px;
+      img{
+        width: min(100%, 795px);
+        margin: 0 auto;
+        height: 100%;
+        object-fit: cover;
+      }
+      @media #{m.$lg} {
+        width: 60%;
+      }
+    }
+    .text-box{
+      @media #{m.$lg} {
+        width: 400px;
+      }
+      @media #{m.$max-lg} {
+        margin-bottom: 50px;
+      }
+      color: m.$dark-color;
+      .section-title{
+        h2{margin-bottom: 20px;}
+        margin-bottom: 30px;
+        @media #{m.$max-lg} {
+          text-align: center;
+          b{margin: 0 auto;}
+        }
+      }
+      .counter{
+        display: flex;
+        justify-content: start;
+        @media #{m.$max-lg} {
+          justify-content: space-between;
+          margin: 0 auto;
+          max-width: 60%;
+        }
+        li{
+          b{
+            display: block;
+            font-size: min(4.5vw, 10em);
+            @media #{m.$max-lg} {
+              font-size: 10vw;
+            }
+            &::after{
+              content: '+';
+            }
+          }
+          @media #{m.$lg} {
+            b:first-child{
+            margin-right: 50px;
+          }
+          }
+          
+          small{
+            font-weight: 600;
+            @media #{m.$max-lg} {
+              font-size: 3vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

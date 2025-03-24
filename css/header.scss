@@ -1,0 +1,263 @@
+@use 'mixin' as m;
+
+header {
+  position: fixed;
+  top: 0;
+  width: 95%;
+  left: 2.5%;
+  display: flex;
+  mix-blend-mode: difference;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  &.active{
+    mix-blend-mode: normal;
+  }
+
+  @media #{m.$lg} {
+    height: 110px;
+  }
+
+  @media #{m.$max-lg} {
+    height: 80px;
+    width: min(90%, 1400px);
+    left: 5%;
+  }
+}
+
+h1 {
+  height: 50%;
+  position: relative;
+  z-index: 1;
+
+  @media (hover:hover) {
+    &:hover {
+      .invert {
+        opacity: 1;
+      }
+
+      .white {
+        opacity: 0;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    height: 100%;
+    transition: all .4s;
+  }
+
+  .invert {
+    opacity: 0;
+  }
+
+  .white {
+    opacity: 1;
+  }
+}
+
+.gnb-lg {
+  height: 40px;
+
+  @media #{m.$max-lg} {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+
+    li{width: 140px;}
+
+    li a {
+      display: flex;
+      height: 40px;
+      align-items: center;
+      padding: 0 20px;
+
+      i {
+        font-size: 1em;
+        margin-right: 15px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      div {
+        height: 100%;
+
+        b {
+          font-weight: 600;
+          width: 40%;
+          height: 100%;
+          display: block;
+          text-align: center;
+          line-height: 40px;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+
+        .ko {
+          letter-spacing: 0.1em;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  /* gnb-motion */
+  li a {
+    overflow: hidden;
+  }
+
+  li a div {
+    transition: all .5s;
+  }
+
+  li a:hover div {
+    transform: translateY(-100%);
+    color: aqua;
+  }
+
+  li a:hover i {
+    color: aqua;
+    transition: all .5s;
+  }
+}
+
+.gnb-sm {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  /* @include m.flex-center; */
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include m.cover;
+  }
+
+  >ul {
+    @include m.pos-center;
+
+    li a {
+      display: flex;
+      height: 40px;
+      align-items: center;
+      font-size: 1.5em;
+      margin: 10px 0;
+      color: white;
+      i {
+        font-size: 1em;
+        width: 70px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      div {
+        height: 100%;
+
+        b {
+          font-weight: 600;
+          height: 40px;
+          width: 40%;
+          display: block;
+          text-align: center;
+          line-height: 40px;
+          text-transform: uppercase;
+        }
+
+        .ko {
+          letter-spacing: 0.1em;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  /* gnb-motion */
+  li a {
+    overflow: hidden;
+  }
+
+  li a div {
+    transition: all .5s;
+  }
+
+  li a:hover div {
+    @media (hover:hover) {
+      
+    }
+    transform: translateY(-40px);
+    color: white;
+  }
+
+  li a:hover i {
+    color: white;
+    transition: all .5s;
+  }
+  /* toggle(show&hide) */
+  @media #{m.$max-lg} {
+    display: none;
+  }
+  @media #{m.$lg} {
+    display: none !important;
+    //!important 우선순위로 스크립트(inline style)를 무시하고 기능적용
+  }
+}
+
+.mbtn {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+
+  span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    left: 0;
+  }
+
+  .bar1 {
+    margin-top: +7px;
+  }
+
+  .bar3 {
+    margin-top: -7px;
+  }
+
+  @media #{m.$lg} {
+    display: none;
+  }
+
+  //mbtn motion
+  & {
+    span {
+      transition: margin-top .4s, transform .4s, ;
+      transition-delay: .4s, 0s;
+    }
+  }
+
+  &.active {
+    span {
+      margin-top: 0;
+      transition-delay: 0s, .4s;
+    }
+
+    .bar1 {
+      transform: rotate(-45deg);
+    }
+
+    .bar2 {
+      opacity: 0;
+    }
+
+    .bar3 {
+      transform: rotate(+45deg);
+    }
+  }
+}

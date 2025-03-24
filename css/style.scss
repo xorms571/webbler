@@ -1,0 +1,72 @@
+/* style guide */
+@use 'mixin' as m;
+body{
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  color: #666;
+  @include m.scrollbar;
+}
+.han-font{
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 3em;
+}
+main{
+  position: relative;
+  z-index: 1;
+}
+.section-title{
+  h2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 10px;
+    b{
+      font-size: min(8vw, 3em);
+      font-weight: 900;
+      line-height: 120%;
+      position: relative;
+      span{
+        position: relative;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        height: 30%;
+        width: 0%;
+        bottom: 0;
+        background: m.$green-color;
+        transition: all 2s;
+      }
+    }
+  }
+  p{
+    display: inline-block;
+    font-size: min(4.5vw, 1.2em);
+    font-weight: 600;
+    clip-path: polygon(0% 0%, 20% 0%, 20% 100%, 0% 100%);
+    transition: clip-path 2s;
+    //마스크 기능(폴리곤 : 왼쪽상단, 중앙상단, 중앙하단, 왼쪽하단)
+  }
+}
+/* motion */
+.section-title.active{
+  h2{
+    b{
+      &::before{
+        width: 70%;
+      }
+    }
+  }
+  p{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    //(폴리곤 : 왼쪽상단, 오른쪽상단, 오른쪽하단, 왼쪽하단) 전체
+  }
+}
+.home-content{
+  section{
+    border-bottom: 1px solid #ddd;
+  }
+}

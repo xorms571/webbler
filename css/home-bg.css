@@ -1,0 +1,43 @@
+.home-bg {
+  z-index: 1;
+  position: absolute;
+  background: #0b36f0;
+  width: 100%;
+  height: 100%;
+  transition: filter 2s;
+}
+.home-bg #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+@media screen and (max-width:1000px) {
+  .home-bg {
+    filter: brightness(0.5);
+  }
+}
+.home-bg #particle-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.home-bg img {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  object-fit: cover;
+}
+@media screen and (min-width:1000px) {
+  .home-bg img {
+    width: 60%;
+  }
+}
+@media screen and (max-width:1000px) {
+  .home-bg img {
+    width: 100%;
+  }
+}/*# sourceMappingURL=home-bg.css.map */

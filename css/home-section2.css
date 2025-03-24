@@ -1,0 +1,94 @@
+.home-section2 {
+  background: white;
+  padding: 10vh 0;
+  overflow: hidden;
+}
+.home-section2 .center {
+  width: min(95%, 1400px);
+  margin: 0 auto;
+}
+@media screen and (min-width:1000px) {
+  .home-section2 .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+.home-section2 .center figure {
+  perspective: 1000px;
+}
+.home-section2 .center figure img {
+  width: min(100%, 795px);
+  margin: 0 auto;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (min-width:1000px) {
+  .home-section2 .center figure {
+    width: 60%;
+  }
+}
+.home-section2 .center .text-box {
+  color: #333;
+}
+@media screen and (min-width:1000px) {
+  .home-section2 .center .text-box {
+    width: 400px;
+  }
+}
+@media screen and (max-width:1000px) {
+  .home-section2 .center .text-box {
+    margin-bottom: 50px;
+  }
+}
+.home-section2 .center .text-box .section-title {
+  margin-bottom: 30px;
+}
+.home-section2 .center .text-box .section-title h2 {
+  margin-bottom: 20px;
+}
+@media screen and (max-width:1000px) {
+  .home-section2 .center .text-box .section-title {
+    text-align: center;
+  }
+  .home-section2 .center .text-box .section-title b {
+    margin: 0 auto;
+  }
+}
+.home-section2 .center .text-box .counter {
+  display: flex;
+  justify-content: start;
+}
+@media screen and (max-width:1000px) {
+  .home-section2 .center .text-box .counter {
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 60%;
+  }
+}
+.home-section2 .center .text-box .counter li b {
+  display: block;
+  font-size: min(4.5vw, 10em);
+}
+@media screen and (max-width:1000px) {
+  .home-section2 .center .text-box .counter li b {
+    font-size: 10vw;
+  }
+}
+.home-section2 .center .text-box .counter li b::after {
+  content: "+";
+}
+@media screen and (min-width:1000px) {
+  .home-section2 .center .text-box .counter li b:first-child {
+    margin-right: 50px;
+  }
+}
+.home-section2 .center .text-box .counter li small {
+  font-weight: 600;
+}
+@media screen and (max-width:1000px) {
+  .home-section2 .center .text-box .counter li small {
+    font-size: 3vw;
+  }
+}/*# sourceMappingURL=home-section2.css.map */

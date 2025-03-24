@@ -1,0 +1,131 @@
+@use 'mixin' as m;
+
+.detail-content{
+  .detail-bg{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background: #fff;
+    #particles-js{
+      opacity: .7;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0; top: 0;
+    }
+  }
+}
+.detail-section{
+  position: relative;
+  width: min(95%, 1400px);
+  margin: 0 auto;
+  margin-top: -100vh;
+  padding: 10vh 0;
+  .section-title{
+    color: m.$dark-color;
+    max-width: 400px;
+    h2{
+      font-size: .8em;
+    }
+    p{
+      display: block;
+      max-width: 390px;
+      font-size: .8em;
+      padding: 20px 0;
+    }
+    a{
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #fff;
+      background: #000;
+      transition: all .5s;
+      &:hover{
+        background: m.$green-color;
+        color: #000;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  @media #{m.$lg} {
+    display: flex;
+    align-items: start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    .section-title{
+      width: 35%;
+      position: sticky;
+      top: 20vh;
+    }
+    .detail-article{
+      width: 60%;
+    }
+  }
+  @media #{m.$max-lg} {
+    .section-title{
+      margin-top: 40px;
+      margin-bottom: 50px;
+      padding: 10px 10px;
+    }
+  }
+  article{
+    padding: 10px 10px;
+    overflow: hidden;
+    color: m.$dark-color;
+    img{
+      width: 100%;
+      &:not(:last-child){
+      }
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: .5);
+    }
+    .text-box{
+      padding: 10vh 0;
+      h3{
+        position: relative;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+      p{
+        margin-bottom: 40px;
+        max-width: 500px;
+        font-size: .8em;
+      }
+      >div{
+        display: flex;
+        justify-content: space-between;
+        dl{
+          width: 200px;
+        dt{
+          position: relative;
+          font-size: 1.2em;
+          font-weight: 800; 
+          margin-bottom: 20px;
+        }
+        dt::after{
+          position: absolute;
+          content: "";
+          display: block;
+          width: 100px;
+          height: 2px;
+          background: m.$dark-color;
+          top: 30px;
+        }
+        dd{font-size: .8em; width: 100px;}
+        }
+      }
+    }
+    /* motion */
+    >*{
+      opacity: 0;
+      transition: all 1s;
+      &:nth-child(odd){transform: translateX(-200px);}
+      &:nth-child(even){transform: translateX(200px);}
+      &.active{
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}

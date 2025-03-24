@@ -1,0 +1,135 @@
+.detail-content .detail-bg {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: #fff;
+}
+.detail-content .detail-bg #particles-js {
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.detail-section {
+  position: relative;
+  width: min(95%, 1400px);
+  margin: 0 auto;
+  margin-top: -100vh;
+  padding: 10vh 0;
+}
+.detail-section .section-title {
+  color: #333;
+  max-width: 400px;
+}
+.detail-section .section-title h2 {
+  font-size: 0.8em;
+}
+.detail-section .section-title p {
+  display: block;
+  max-width: 390px;
+  font-size: 0.8em;
+  padding: 20px 0;
+}
+.detail-section .section-title a {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background: #000;
+  transition: all 0.5s;
+}
+.detail-section .section-title a:hover {
+  background: #00fbb9;
+  color: #000;
+  font-weight: 600;
+}
+@media screen and (min-width:1000px) {
+  .detail-section {
+    display: flex;
+    align-items: start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .detail-section .section-title {
+    width: 35%;
+    position: sticky;
+    top: 20vh;
+  }
+  .detail-section .detail-article {
+    width: 60%;
+  }
+}
+@media screen and (max-width:1000px) {
+  .detail-section .section-title {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding: 10px 10px;
+  }
+}
+.detail-section article {
+  padding: 10px 10px;
+  overflow: hidden;
+  color: #333;
+  /* motion */
+}
+.detail-section article img {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.detail-section article .text-box {
+  padding: 10vh 0;
+}
+.detail-section article .text-box h3 {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.detail-section article .text-box p {
+  margin-bottom: 40px;
+  max-width: 500px;
+  font-size: 0.8em;
+}
+.detail-section article .text-box > div {
+  display: flex;
+  justify-content: space-between;
+}
+.detail-section article .text-box > div dl {
+  width: 200px;
+}
+.detail-section article .text-box > div dl dt {
+  position: relative;
+  font-size: 1.2em;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.detail-section article .text-box > div dl dt::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: #333;
+  top: 30px;
+}
+.detail-section article .text-box > div dl dd {
+  font-size: 0.8em;
+  width: 100px;
+}
+.detail-section article > * {
+  opacity: 0;
+  transition: all 1s;
+}
+.detail-section article > *:nth-child(odd) {
+  transform: translateX(-200px);
+}
+.detail-section article > *:nth-child(even) {
+  transform: translateX(200px);
+}
+.detail-section article > *.active {
+  opacity: 1;
+  transform: translateX(0);
+}/*# sourceMappingURL=detail.css.map */

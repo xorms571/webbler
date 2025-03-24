@@ -1,0 +1,160 @@
+@charset "UTF-8";
+.contact-content {
+  position: relative;
+  height: 100vh;
+}
+@media screen and (min-width:1000px) {
+  .contact-content {
+    display: flex;
+  }
+  .contact-content > * {
+    width: 50%;
+  }
+  .contact-content section {
+    position: relative;
+    background: #FFF;
+  }
+}
+@media screen and (max-width:1000px) {
+  .contact-content > * {
+    width: 100%;
+  }
+  .contact-content section {
+    position: absolute;
+    top: 0;
+    background: rgba(255, 255, 255, 0.7);
+  }
+}
+.contact-content video {
+  height: 100%;
+  object-fit: cover;
+}
+.contact-content section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  /* 지도 */
+}
+.contact-content section #particles-js {
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.contact-content section .textbox {
+  position: relative;
+  color: #333;
+}
+@media screen and (max-width:1000px) {
+  .contact-content section .textbox {
+    padding: 20px 10px;
+    background: #fff;
+  }
+}
+.contact-content section .textbox .section-title {
+  margin-bottom: 20px;
+}
+@media screen and (max-width:1000px) {
+  .contact-content section .textbox .section-title {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 300px;
+  }
+}
+.contact-content section .textbox address {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+@media screen and (max-width:1000px) {
+  .contact-content section .textbox address {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.7em;
+    margin-bottom: 20px;
+  }
+}
+.contact-content section .textbox address i {
+  color: #333;
+  margin-right: 10px;
+}
+.contact-content section .textbox address p {
+  margin: 5px 0;
+}
+.contact-content section .textbox address p a {
+  color: #0b36f0;
+}
+.contact-content section .textbox address p a:hover {
+  text-decoration: underline;
+}
+.contact-content section .textbox button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: #333;
+  color: #FFF;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+@media screen and (max-width:1000px) {
+  .contact-content section .textbox button {
+    margin: 0 auto;
+    margin-left: 10px;
+  }
+}
+.contact-content section .textbox button:hover {
+  background: #00fbb9;
+  color: #333;
+  font-weight: 600;
+}
+.contact-content section .gmap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 1s;
+  background: #DDD;
+}
+.contact-content section .gmap.active {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+.contact-content section .gmap img {
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  mix-blend-mode: multiply;
+}
+.contact-content section .gmap .toggle-map-btn {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translateY(-50%);
+  background: #333;
+  color: #FFF;
+  transition: all 0.5s;
+}
+.contact-content section .gmap .toggle-map-btn i {
+  color: #fff;
+}
+.contact-content section .gmap .toggle-map-btn:hover {
+  background: #00fbb9;
+}
+.contact-content section .gmap .toggle-map-btn:hover i {
+  color: #333;
+  font-weight: 900;
+}
+.contact-content section .gmap iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,219 @@
+.price-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.price-bg img {
+  transition: opacity 1s;
+}
+@media screen and (min-width:1000px) {
+  .price-bg img {
+    width: 70%;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width:1000px) {
+  .price-bg img {
+    width: 100%;
+    opacity: 0.3;
+  }
+}
+.price-bg #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.price-main {
+  overflow: hidden;
+}
+
+.price-section1 {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.price-section1 .center {
+  width: min(95%, 1400px);
+  margin: 0 auto;
+}
+@media screen and (max-width:1000px) {
+  .price-section1 .center {
+    width: min(80%, 1200px);
+    margin: 0 auto;
+  }
+}
+.price-section1 .center .text-box {
+  color: #333;
+  max-width: 500px;
+}
+.price-section1 .center .text-box .section-title p {
+  margin-bottom: 40px;
+}
+.price-section1 .center .text-box .section-title div {
+  font-size: 0.9em;
+  max-width: 420px;
+}
+.price-section1 .center .text-box .section-title div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.price-section2 {
+  padding: 10vh 0;
+  background: #0b36f0;
+}
+.price-section2 .center {
+  /* motion */
+}
+@media screen and (min-width:1000px) {
+  .price-section2 .center {
+    width: min(95%, 1400px);
+    margin: 0 auto;
+    margin-top: -25vh;
+  }
+}
+@media screen and (max-width:1000px) {
+  .price-section2 .center {
+    width: min(80%, 1200px);
+    margin: 0 auto;
+    margin-top: -25vh;
+  }
+}
+@media screen and (min-width:1000px) {
+  .price-section2 .center figure {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+  .price-section2 .center figure .img-wrap {
+    width: 47%;
+  }
+  .price-section2 .center figure .section-title {
+    width: 47%;
+  }
+  .price-section2 .center figure .section-title p {
+    max-width: 555px;
+  }
+}
+@media screen and (max-width:1000px) {
+  .price-section2 .center figure img {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+.price-section2 .center figure .img-wrap img {
+  width: 100%;
+}
+.price-section2 .center figure .section-title {
+  color: #fff;
+}
+.price-section2 .center figure .img-wrap {
+  perspective: 1000px;
+}
+.price-section2 .center figure .img-wrap img {
+  transition: transform 1s;
+  transform-origin: center bottom;
+  transform: rotateX(-90deg);
+  backface-visibility: hidden;
+}
+.price-section2 .center figure.active img {
+  transform: rotateX(0deg);
+}
+.price-section2 .center .price-table {
+  margin-top: 10vh;
+}
+@media screen and (min-width:1000px) {
+  .price-section2 .center .price-table {
+    display: flex;
+    justify-content: space-between;
+  }
+  .price-section2 .center .price-table li {
+    width: 32%;
+  }
+}
+@media screen and (max-width:1000px) {
+  .price-section2 .center .price-table li {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .price-section2 .center .price-table li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+.price-section2 .center .price-table {
+  /* motion */
+}
+.price-section2 .center .price-table li {
+  background: #333;
+  color: #333;
+}
+.price-section2 .center .price-table li .title em {
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.price-section2 .center .price-table li .price strong {
+  display: block;
+  font-size: 3em;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.price-section2 .center .price-table li .price small {
+  font-size: 1.2em;
+}
+.price-section2 .center .price-table li p {
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  font-weight: 400;
+}
+.price-section2 .center .price-table li p.price, .price-section2 .center .price-table li p.title {
+  padding: 30px 0;
+}
+.price-section2 .center .price-table li p:last-child {
+  padding: 40px 0;
+}
+.price-section2 .center .price-table li p:not(.price, .title, :last-child) {
+  font-size: 1.2em;
+}
+.price-section2 .center .price-table li p b {
+  font-weight: 700;
+}
+.price-section2 .center .price-table li p a {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 50px;
+  transition: all 0.3s;
+}
+.price-section2 .center .price-table li p a:hover {
+  background: #00fbb9;
+  color: #333;
+  font-weight: 900;
+}
+.price-section2 .center .price-table li {
+  perspective: 1000px;
+}
+.price-section2 .center .price-table li > p {
+  transition: all 1s;
+  transform: rotateX(-180deg);
+  backface-visibility: hidden;
+}
+.price-section2 .center .price-table li p.active {
+  background: #eee;
+  transform: rotateX(0deg);
+}
+.price-section2 .center .price-table li p.active.price {
+  background: #00fbb9;
+}/*# sourceMappingURL=price.css.map */

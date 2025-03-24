@@ -1,0 +1,174 @@
+@use 'mixin' as m;
+
+.contact-content {
+  position: relative;
+  height: 100vh;
+
+  @media #{m.$lg} {
+    display: flex;
+
+    >* {
+      //메인안에 있는 전부다 비디오,섹션
+      width: 50%;
+    }
+
+    section {
+      position: relative;
+      background: #FFF;
+    }
+  }
+
+  @media #{m.$max-lg} {
+    >* {
+      width: 100%;
+    }
+
+    section {
+      position: absolute;
+      top: 0;
+      background: rgba(#FFF, .7);
+    }
+  }
+
+  video {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  section {
+    //position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+
+    /* 지도 */
+    #particles-js {
+      opacity: .7;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+    }
+
+    .textbox {
+      position: relative;
+      color: m.$dark-color;
+      @media #{m.$max-lg} {
+        padding: 20px 10px;
+        background: #fff;
+      }
+
+      .section-title {
+        margin-bottom: 20px;
+
+        @media #{m.$max-lg} {
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          max-width: 300px;
+        }
+      }
+
+      address {
+        @media #{m.$max-lg} {
+          width: 90%;
+          margin: 0 auto;
+          font-size: .7em;
+          margin-bottom: 20px;
+        }
+
+        font-size: .9em;
+        font-weight: 600;
+
+        i {
+          color: m.$dark-color;
+          margin-right: 10px;
+        }
+
+        p {
+          margin: 5px 0;
+          a{
+            color: m.$blue-color;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      button {
+        @media #{m.$max-lg} {
+          margin: 0 auto;
+          margin-left: 10px;
+        }
+        margin-top: 20px;
+        padding: 10px 30px;
+        background: m.$dark-color;
+        color: #FFF;
+        transition: all .3s;
+        font-weight: 600;
+
+        &:hover {
+          background: m.$green-color;
+          color: m.$dark-color;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .gmap {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: translateX(100%);
+      transition: transform 1s;
+      background: #DDD;
+
+      &.active {
+        transform: translateX(0);
+        transition-delay: .3s;
+      }
+
+      img {
+        width: 300px;
+        @include m.pos-center;
+        mix-blend-mode: multiply; //흰색 사라짐
+      }
+
+      .toggle-map-btn {
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        transform: translateY(-50%);
+        background: m.$dark-color;
+        color: #FFF;
+        transition: all .5s;
+
+        i {
+          color: #fff;
+        }
+
+        &:hover {
+          background: m.$green-color;
+
+          i {
+            color: m.$dark-color;
+            font-weight: 900;
+          }
+        }
+      }
+
+      iframe {
+        position: absolute; //글자를 덮음
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
