@@ -1,6 +1,6 @@
 # WEBBLER
 
-이 프로젝트는 **PHP**, **SCSS**, **JavaScript**의 기본 기술을 구축하고 향상시키기 위해 설계되었습니다.
+이 프로젝트는 **PHP**, **SCSS**, **JavaScript**의 기본 기술을 구축하고 향상시키기 위해 설계되었습니다.  
 This project is designed to build and enhance basic skills in **PHP**, **SCSS** and **JavaScript**.
 
 ---
@@ -30,9 +30,9 @@ This project is designed to build and enhance basic skills in **PHP**, **SCSS** 
 ## 🚚 배포 / Deployment
 
 - **닷홈(Dothome)** 호스팅 서비스를 사용하여 웹사이트를 배포했습니다.  
-  The website was deployed using **Dothome** hosting services.
+  The website was deployed using **Dothome** hosting services.  
   https://www.dothome.co.kr/
   
 - **알드라이브(Altools ALDrive)**를 활용하여 파일을 업로드하고 서버에 배포를 진행했습니다.  
-  Deployment was managed by uploading project files to the server using **ALDrive (Altools)**.
+  Deployment was managed by uploading project files to the server using **ALDrive (Altools)**.  
   https://altools.co.kr/product/ALDRIVE
