@@ -29,6 +29,6 @@ This project is designed to build and enhance basic skills in **PHP**, **SCSS** 
   The website was deployed using **Dothome** hosting services.  
   https://www.dothome.co.kr/
   
-- **알드라이브(Altools ALDrive)**를 활용하여 파일을 업로드하고 서버에 배포를 진행했습니다.  
+- **알드라이브(Altools ALDrive)** 를 활용하여 파일을 업로드하고 서버에 배포를 진행했습니다.  
   Deployment was managed by uploading project files to the server using **ALDrive (Altools)**.  
   https://altools.co.kr/product/ALDRIVE
